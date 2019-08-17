@@ -1,3 +1,2 @@
-# dk-popup
-dkPopup - modal plugin
-(doguskar.github.io/dk-popup "dkPopup")
+# dkPopup - Modal Plugin
+[dkPopup](doguskar.github.io/dk-popup "dkPopup")
