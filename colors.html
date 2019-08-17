@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Colors</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/kardo-icon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> <!--sayfaya ekle-->
+		
+	<style type="text/css">
+		.colors{
+			height:150px;
+			position:relative;
+			cursor:pointer;
+		}
+		.colors .title{
+			background-color: rgba(0,0,0,0.5);
+			position:absolute;
+			bottom:62.5px;
+			width:100%;
+			padding:5px 0px;
+			color:#fff;
+			text-align:center;
+			font-size:15px;
+			
+		}
+		.colors-ani{
+			transition:500ms opacity;
+			cursor:pointer;
+			width:100%;
+			height:100%;
+			position:fixed;
+			top:0;
+			left:0;
+		}
+		.colors-ani .text{
+			background-color: rgba(0,0,0,0.5);
+			position:absolute;
+			top:40%;
+			width:100%;
+			padding:5px 0px;
+			color:#fff;
+			text-align:center;
+			font-size:32px;
+		}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		function Kopyala(element) {
+			var $temp = $("<input>")
+				$("body").append($temp);
+				$temp.val($(element).text()).select();
+				document.execCommand("copy");
+				$temp.remove();
+			
+			animation(element)
+		};
+		function animation(color){
+			document.getElementById("colors-ani").style.zIndex = 999;
+			document.getElementById("colors-ani").style.background = color;
+			document.getElementById("colors-ani-t").innerHTML = color;
+			document.getElementById("colors-ani").style.opacity = 1;
+			setTimeout(function(){document.getElementById("colors-ani").style.opacity = 0;},750);
+			setTimeout(function(){document.getElementById("colors-ani").style.zIndex = -999;},1000);
+		}
+	</script>
+	
+</head>
+<body>
+<span id="resultForDisplayChanging"></span>
+	<div id="colors-ani" class="colors-ani" style="opacity=0; z-index:-999"> <div id="colors-ani-t" class="text"></div> </div>
+	<div class="col-xs-2 padding-0 colors" style="background:#f9f9f9;" onclick="return Kopyala('#f9f9f9')">	<div id="f9f9f9" class="title">#f9f9f9</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#f0f0f0;" onclick="return Kopyala('#f0f0f0')">	<div id="f0f0f0" class="title">#f0f0f0</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#e9e9e9;" onclick="return Kopyala('#e9e9e9')">	<div id="e9e9e9" class="title">#e9e9e9</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#d0d0d0;" onclick="return Kopyala('#d0d0d0')">	<div id="d0d0d0" class="title">#d0d0d0</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#adadad;" onclick="return Kopyala('#adadad')">	<div id="adadad" class="title">#adadad</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#808080;" onclick="return Kopyala('#808080')">	<div id="808080" class="title">#808080</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#646464;" onclick="return Kopyala('#646464')">	<div id="646464" class="title">#646464</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#333333;" onclick="return Kopyala('#333333')">	<div id="333333" class="title">#333333</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#1e1e1e;" onclick="return Kopyala('#1e1e1e')">	<div id="1e1e1e" class="title">#1e1e1e</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#0f0f0f;" onclick="return Kopyala('#0f0f0f')">	<div id="0f0f0f" class="title">#0f0f0f</div>	</div>
+	
+	<div class="col-xs-2 padding-0 colors" style="background:#ffd8d8;" onclick="return Kopyala('#ffd8d8')">	<div id="ffd8d8" class="title">#ffd8d8</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#ff9898;" onclick="return Kopyala('#ff9898')">	<div id="ff9898" class="title">#ff9898</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#ff4444;" onclick="return Kopyala('#ff4444')">	<div id="ff4444" class="title">#ff4444</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#ff0000;" onclick="return Kopyala('#ff0000')">	<div id="ff0000" class="title">#ff0000</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#c80000;" onclick="return Kopyala('#c80000')">	<div id="c80000" class="title">#c80000</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#6c0000;" onclick="return Kopyala('#6c0000')">	<div id="6c0000" class="title">#6c0000</div>	</div>
+	
+	<div class="col-xs-2 padding-0 colors" style="background:#d9edf7;" onclick="return Kopyala('#d9edf7')">	<div id="d9edf7" class="title">#d9edf7</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#81cdf6;" onclick="return Kopyala('#81cdf6')">	<div id="81cdf6" class="title">#81cdf6</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#1980da;" onclick="return Kopyala('#1980da')">	<div id="1980da" class="title">#1980da</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#337ab7;" onclick="return Kopyala('#337ab7')">	<div id="337ab7" class="title">#337ab7</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#0e639c;" onclick="return Kopyala('#0e639c')">	<div id="0e639c" class="title">#0e639c</div>	</div>
+	
+	<div class="col-xs-3 padding-0 colors" style="background:#fbf3c8;" onclick="return Kopyala('#fbf3c8')">	<div id="fbf3c8" class="title">#fbf3c8</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#ffe734;" onclick="return Kopyala('#ffe734')">	<div id="ffe734" class="title">#ffe734</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#d9bf00;" onclick="return Kopyala('#d9bf00')">	<div id="d9bf00" class="title">#d9bf00</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#aa9500;" onclick="return Kopyala('#aa9500')">	<div id="aa9500" class="title">#aa9500</div>	</div>
+	
+	<div class="col-xs-2 padding-0 colors" style="background:#f8e4cc;" onclick="return Kopyala('#f8e4cc')">	<div id="f8e4cc" class="title">#f8e4cc</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#ffa132;" onclick="return Kopyala('#ffa132')">	<div id="ffa132" class="title">#ffa132</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#ff9214" onclick="return Kopyala('#ff9214')">	<div id="ff9214" class="title">#ff9214</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#de7800;" onclick="return Kopyala('#de7800')">	<div id="de7800" class="title">#de7800</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#cc6e00;" onclick="return Kopyala('#cc6e00')">	<div id="cc6e00" class="title">#cc6e00</div>	</div>
+	
+	<div class="col-xs-2 padding-0 colors" style="background:#dff0d8;" onclick="return Kopyala('#dff0d8')">	<div id="dff0d8" class="title">#dff0d8</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#87e677;" onclick="return Kopyala('#87e677')">	<div id="87e677" class="title">#87e677</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#6ed25d;" onclick="return Kopyala('#6ed25d')">	<div id="6ed25d" class="title">#6ed25d</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#46a536;" onclick="return Kopyala('#46a536')">	<div id="46a536" class="title">#46a536</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#2a9819;" onclick="return Kopyala('#2a9819')">	<div id="2a9819" class="title">#2a9819</div>	</div>
+	<div class="col-xs-2 padding-0 colors" style="background:#138101;" onclick="return Kopyala('#138101')">	<div id="138101" class="title">#138101</div>	</div>
+	
+	<div class="col-xs-3 padding-0 colors" style="background:#dcd5ff;" onclick="return Kopyala('#dcd5ff')">	<div id="dcd5ff" class="title">#dcd5ff</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#8175c7;" onclick="return Kopyala('#8175c7')">	<div id="8175c7" class="title">#8175c7</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#6b5eab;" onclick="return Kopyala('#6b5eab')">	<div id="6b5eab" class="title">#6b5eab</div>	</div>
+	<div class="col-xs-3 padding-0 colors" style="background:#594C9C;" onclick="return Kopyala('#594C9C')">	<div id="594C9C" class="title">#594C9C</div>	</div>
+</body>
+</html>
